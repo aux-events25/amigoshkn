@@ -7,10 +7,12 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="512x512" href="icono-512.png">
-<meta name="apple-mobile-web-app-title" content="Posada">
+<link rel="apple-touch-icon" sizes="180x180" href="icono-hkn-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-hkn-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icono-hkn-512.png">
+<link rel="manifest" href="manifest.json">
+<meta name="application-name" content="Posada Hkn">
+<meta name="apple-mobile-web-app-title" content="Posada Hkn">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#5e0614">
@@ -2140,7 +2142,7 @@ function siguienteAviso(){
     '<h3 id="apNotifT">'+t.nTit+'</h3><p>'+t.nTxt+'</p><button class="boton" type="button" data-ir="1">Ir ahora</button><button class="boton secundario" type="button">Después</button></div>';
   }
   $('appPosada').appendChild(d); confeti(); campanita(); if(navigator.vibrate) try{navigator.vibrate([120,80,120]);}catch(e){}
-  if(document.hidden&&'Notification' in window&&Notification.permission==='granted'){ try{ new Notification('Posada Navideña',{body:(typeof s==='object'?'🏅 '+s.logro.t:t.nTit),icon:'apple-touch-icon.png'}); }catch(e){} }
+  if(document.hidden&&'Notification' in window&&Notification.permission==='granted'){ try{ new Notification('Posada Navideña',{body:(typeof s==='object'?'🏅 '+s.logro.t:t.nTit),icon:'icono-hkn-180.png'}); }catch(e){} }
   var cerrar=function(ir){ d.remove(); if(ir){ colaAvisos=[]; avisoAbierto=false; if(typeof s==='object') logros(); else abrir(s); } else siguienteAviso(); };
   d.querySelectorAll('button').forEach(function(b){ b.onclick=function(){ cerrar(b.getAttribute('data-ir')==='1'); }; });
   setTimeout(function(){ var y=d.querySelector('[data-ir]'); if(y) y.focus(); },50);
